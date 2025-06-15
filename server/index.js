@@ -11,6 +11,11 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 
+// data imports
+
+import User from './models/User.js';
+import { dataUser } from './data/index.js'
+
 
 
 /* CONFIGURATION */
@@ -43,6 +48,7 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+    // User.insertMany(dataUser);
 
     /* ONLY ADD DATA ONE TIME */
     // AffiliateStat.insertMany(dataAffiliateStat);
@@ -52,3 +58,5 @@ mongoose
     // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser);
   })
+
+  .catch((error) => console.log(`${error} did not connect`))
