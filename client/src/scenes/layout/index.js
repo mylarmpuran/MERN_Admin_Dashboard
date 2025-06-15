@@ -7,20 +7,20 @@ import { useState } from 'react'
 
 const Layout = () => {
     const isNonMobile = useMediaQuery("(min-width: 600px)");
-    const [isSidebarOpen, setisSidebarOpne] = useState(true);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   return (
-    <Box width="100%" height="100%">
+    <Box display={isNonMobile ? 'flex' : "block"} width="100%" height="100%">
         <Sidebar
             isNonMobile={isNonMobile}
             drawerWidth="250px"
             isSidebarOpen={isSidebarOpen}
-            setisSidebarOpne={setisSidebarOpne}
+            setIsSidebarOpen={setIsSidebarOpen}
         />
 
-        <Box>
+        <Box flexGrow={1}>
             <Navbar
              isSidebarOpen={isSidebarOpen}
-            setisSidebarOpne={setisSidebarOpne}
+            setIsSidebarOpen={setIsSidebarOpen}
             />
             <Outlet/>
         </Box>
