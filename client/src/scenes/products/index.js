@@ -88,7 +88,9 @@ const Product = ({
 
 const Products = () => {
   const { data, isLoading } = useGetProductsQuery();
-  
+
+const urll = useGetProductsQuery();
+console.log("i am product query", urll)  
   
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
 
@@ -107,7 +109,7 @@ const Products = () => {
             "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
           }}
         >
-          {data.map(
+          {data && data.map(
             ({
               _id,
               name,

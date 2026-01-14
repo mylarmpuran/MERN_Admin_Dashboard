@@ -58,9 +58,9 @@ mongoose
 
     /* ONLY ADD DATA ONE TIME */
     // AffiliateStat.insertMany(dataAffiliateStat);
-    // OverallStat.insertMany(dataOverallStat);
+    OverallStat.insertMany(dataOverallStat);
     // Product.insertMany(dataProduct);
-    // ProductStat.insertMany(dataProductStat);
+    ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser);
   })
