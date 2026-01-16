@@ -116,7 +116,7 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={theme.palette.background.alt}
           p="1rem"
-          borderRadius="0.55rem"
+          borderRadius="0.55 rem"
         >
           <OverviewChart view="sales" isDashboard={true} />
         </Box>
@@ -150,7 +150,7 @@ const Dashboard = () => {
           sx={{
             "& .MuiDataGrid-root": {
               border: "none",
-              borderRadius: "5rem",
+              borderRadius: "0.05rem",
             },
             "& .MuiDataGrid-cell": {
               borderBottom: "none",
@@ -185,7 +185,7 @@ const Dashboard = () => {
           gridRow="span 3"
           backgroundColor={theme.palette.background.alt}
           p="1.5rem"
-          borderRadius="0.55rem"
+          borderRadius="0.05 rem"
         >
           <Typography variant="h6" sx={{ color: theme.palette.secondary[100] }}>
             Sales By Category
